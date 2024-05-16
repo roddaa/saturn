@@ -6,3 +6,29 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+tokio = { version = "1.37.0", features = ["full"] }
+sqlx = { version = "0.7.4", features = ["postgres"] }
+serde = { version = "1.0.137", features = ["derive"] }
+serde_json = { version = "1.0.117" }
+
+# util
+chrono = { version = "0.4.38" }
+rand = { version = "0.8.5" }
+dotenv = { version = "0.15.0" }
+log = { version = "0.4.21" }
+fern = { version = "0.6.2" }
+
+[dependencies.serenity]
+version = "0.12.1"
+default-features = false
+feautres = [
+    "builder",
+    "chrono",
+    "cache",
+    "gateway",
+    "model",
+    "utils",
+    "client",
+    "http",
+    "rustls_backend",
+]
